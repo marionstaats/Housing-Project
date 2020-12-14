@@ -1,9 +1,7 @@
-// document.getElementById("submit").addEventListener("submit", function () {
-//         submit();
-        
-// });
-
-submit();
+document.getElementById("submit").addEventListener("click", function (event) {
+        submit();
+        event.preventDefault();      
+});
 
 //on button click
 function submit(){
@@ -15,7 +13,7 @@ function submit(){
         'property-type': document.getElementById("property-type").value,
         'rooms-number': parseInt(document.getElementById("rooms-number").value),
         'zip-code': parseInt(document.getElementById("zip-code").value),
-        
+        //if statement because not mandatory
         'garden': Boolean(document.getElementsByName("garden").value),
         'equipped-kitchen': Boolean(document.getElementsByName("equipped-kitchen").value),
         'furnished': Boolean(document.getElementsByName("furnished").value),
