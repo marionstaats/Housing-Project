@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImmoEliza Sales Web-App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="">
+</head>
+<body>
+    <h1>Fill out the form to get your housing price</h1>
+
+    <div class="boxes">
+        <!-- Form -->
+        <form method="POST" id="myForm">
+            <!-- Area -->
+            <label for="area">Area:</label><br>
+            <input type="number" id="area" min="10" name="area" value="10" required><br>
+            <!-- Property type -->
+            <p>Property-type:</p>
+            <div class="radiobuttons">
+                <input type="radio" id="property-type" name="property-type" value="APARTMENT" checked>
+                <label for="APARTMENT">Apartment</label><br>
+                <input type="radio" id="property-type" name="property-type" value="HOUSE">
+                <label for="HOUSE">House</label><br>
+                <input type="radio" id="property-type" name="property-type" value="OTHERS">
+                <label for="OTHERS">Others</label><br>    
+            </div>
+            <!-- Roomsnumber -->
+            <label for="rooms-number">Number of rooms:</label><br>
+            <input type="number" id="rooms-number" min="1" value="1" name="rooms-number" required><br>
+            <!-- Zip code -->
+            <label for="zip-code">Zip-code (Belgium):</label><br>
+            <input type="number" min="1000" max="9999" value="1000" id="zip-code" name="zip-code" required><br>
+            <!-- Garden yes/no -->
+            <p>Garden?</p>
+            <div class="radiobuttons">
+                <input type="radio" id="gardenYes" name="garden" value="true" checked>
+                <label for="gardenYes">Yes</label><br>
+                <input type="radio" id="gardenNo" name="garden" value="false">
+                <label for="gardenNo">No</label><br>    
+            </div>
+            <!-- equipped kitchen yes/no -->
+            <p>Equipped kitchen?</p>
+            <div class="radiobuttons">
+                <input type="radio" id="kitchenYes" name="equipped-kitchen" value="true" checked>
+                <label for="kitchenYes">Yes</label><br>
+                <input type="radio" id="kitchenNo" name="equipped-kitchen" value="false">
+                <label for="kitchenNo">No</label><br>    
+            </div>
+            <!-- equipped furnished yes/no -->
+            <p>Furnished?</p>
+            <div class="radiobuttons">
+                <input type="radio" id="furnishedYes" name="furnished" value="true" checked>
+                <label for="furnishedYes">Yes</label><br>
+                <input type="radio" id="kitchenNo" name="furnished" value="false">
+                <label for="furnishedNo">No</label><br>    
+            </div>
+            <!-- equipped terrace yes/no -->
+            <p>Terrace?</p>
+            <div class="radiobuttons">
+                <input type="radio" id="terraceYes" name="terrace" value="true" checked>
+                <label for="terraceYes">Yes</label><br>
+                <input type="radio" id="terraceNo" name="terrace" value="false">
+                <label for="terraceNo">No</label><br>    
+            </div>
+            <!-- facades -->
+            <label for="facades-number">Number of facades:</label><br>
+            <input type="number" min="0" value="1" max="4" id="facades-number" name="facades-number"><br>
+            <!-- submit -->
+            <button id="submit">Get your predicted price</button>
+        </form>
+        <!-- resultbox -->
+        <div id="pricebox">
+            <h3 id="price"></h3>
+        </div>     
+    </div>
+
+    <!-- JS -->
+    <script src="index.js"></script>
+</body>
+</html>
