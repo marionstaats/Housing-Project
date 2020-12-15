@@ -4,79 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ImmoEliza Sales Web-App</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="">
 </head>
 <body>
     <h1>Fill out the form to get your housing price</h1>
+<div class="bigbox">
 
     <div class="boxes">
         <!-- Form -->
         <form method="POST" id="myForm">
             <!-- Area -->
-            <label for="area">Area:</label><br>
-            <input type="number" id="area" min="10" name="area" value="10" required><br>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" min="15" max="55000" id="area" value="15" required>
+                <label for="area">Area in m2</label>
+            </div>
             <!-- Property type -->
             <p>Property-type:</p>
-            <div class="radiobuttons">
-                <input type="radio" id="property-type" name="property-type" value="APARTMENT" checked>
-                <label for="APARTMENT">Apartment</label><br>
-                <input type="radio" id="property-type" name="property-type" value="HOUSE">
-                <label for="HOUSE">House</label><br>
-                <input type="radio" id="property-type" name="property-type" value="OTHERS">
-                <label for="OTHERS">Others</label><br>    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="property-type" value="APARTMENT" checked>
+                <label class="form-check-label" for="APARTMENT">
+                    Apartment
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="property-type" value="HOUSE">
+                <label class="form-check-label" for="HOUSE">
+                    House
+                </label>
+            </div>
+            <div class="form-check form-check-inline" style="margin-bottom: 1rem!important">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="property-type" value="OTHERS">
+                <label class="form-check-label" for="OTHERS">
+                    Others
+                </label>
             </div>
             <!-- Roomsnumber -->
-            <label for="rooms-number">Number of rooms:</label><br>
-            <input type="number" id="rooms-number" min="1" value="1" name="rooms-number" required><br>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" min="1" max="204" id="rooms-number" value="1" required>
+                <label for="rooms-number">Number of rooms</label>
+            </div>
             <!-- Zip code -->
-            <label for="zip-code">Zip-code (Belgium):</label><br>
-            <input type="number" min="1000" max="9999" value="1000" id="zip-code" name="zip-code" required><br>
-            <!-- Garden yes/no -->
-            <p>Garden?</p>
-            <div class="radiobuttons">
-                <input type="radio" id="gardenYes" name="garden" value="true" checked>
-                <label for="gardenYes">Yes</label><br>
-                <input type="radio" id="gardenNo" name="garden" value="false">
-                <label for="gardenNo">No</label><br>    
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" min="1000" max="9998" value="1000" id="zip-code" required>
+                <label for="zip-code">Zip code (Belgium)</label>
             </div>
-            <!-- equipped kitchen yes/no -->
-            <p>Equipped kitchen?</p>
-            <div class="radiobuttons">
-                <input type="radio" id="kitchenYes" name="equipped-kitchen" value="true" checked>
-                <label for="kitchenYes">Yes</label><br>
-                <input type="radio" id="kitchenNo" name="equipped-kitchen" value="false">
-                <label for="kitchenNo">No</label><br>    
+
+            <div class="smallbox">
+                <div class="smallbox1">
+                    <!-- Garden yes/no -->
+                    <p>Garden?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="garden" id="inlineRadio1" value="true">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="garden" id="inlineRadio2" value="false">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </div>
+                <div class="smallbox1">
+                    <!-- equipped kitchen yes/no -->
+                    <p>Equipped kitchen?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="equipped-kitchen" id="inlineRadio1" value="true">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="equipped-kitchen" id="inlineRadio2" value="false">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </div>
+                <div class="smallbox1">
+                    <!-- equipped furnished yes/no -->
+                    <p>Furnished?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="furnished" id="inlineRadio1" value="true">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="furnished" id="inlineRadio2" value="false">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </div>
+                <div class="smallbox1">
+                    <!-- equipped terrace yes/no -->
+                    <p>Terrace?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="terrace" id="inlineRadio1" value="true">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="terrace" id="inlineRadio2" value="false">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </div>            
             </div>
-            <!-- equipped furnished yes/no -->
-            <p>Furnished?</p>
-            <div class="radiobuttons">
-                <input type="radio" id="furnishedYes" name="furnished" value="true" checked>
-                <label for="furnishedYes">Yes</label><br>
-                <input type="radio" id="kitchenNo" name="furnished" value="false">
-                <label for="furnishedNo">No</label><br>    
-            </div>
-            <!-- equipped terrace yes/no -->
-            <p>Terrace?</p>
-            <div class="radiobuttons">
-                <input type="radio" id="terraceYes" name="terrace" value="true" checked>
-                <label for="terraceYes">Yes</label><br>
-                <input type="radio" id="terraceNo" name="terrace" value="false">
-                <label for="terraceNo">No</label><br>    
-            </div>
+
             <!-- facades -->
-            <label for="facades-number">Number of facades:</label><br>
-            <input type="number" min="0" value="1" max="4" id="facades-number" name="facades-number"><br>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" min="0" max="4" value="1" id="facades-number">
+                <label for="facades-number">Number of facades</label>
+            </div>
+
             <!-- submit -->
-            <button id="submit">Get your predicted price</button>
+            <!-- <div class="col-12">
+                <button class="btn btn-primary" type="submit" id="submit">Get your predicted price</button>
+            </div> -->
+
+            <!-- new submit -->
+            <div class="submit1">
+                <button type="button" class="btn btn-primary" id="submit" data-toggle="modal" data-target="#exampleModalCenter">
+                    Get your predicted price
+                </button>    
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Predicted price</h5>
+                        </div>
+                        <div class="modal-body" id="price">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
-        <!-- resultbox -->
-        <div id="pricebox">
-            <h3 id="price"></h3>
-        </div>     
     </div>
+    <!-- resultbox -->
+    <div id="pricebox">
+        <h3 id="price"></h3>
+    </div>   
+</div>  
 
     <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <script src="index.js"></script>
 </body>
 </html>
