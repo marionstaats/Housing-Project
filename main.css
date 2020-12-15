@@ -49,3 +49,13 @@ p{
 .submit1{
     text-align: center;
 }
+
+/* Mobile version */
+@media only screen and (max-width: 600px) {
+    .boxes {
+        width: 90%;
+    }
+    h1{
+        font-size: 17px;
+    }
+}
