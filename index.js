@@ -68,3 +68,4 @@ function createBox(json){
 function createErrorBox(){
         document.getElementById("price").innerHTML = `We encountered a server error, please try again`;
 }
+
