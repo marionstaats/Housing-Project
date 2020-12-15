@@ -32,7 +32,7 @@ p{
     margin-bottom: 0.3rem;
 }
 .form-check {
-    margin-bottom: 0.1rem;
+    margin-bottom: 0.5rem;
 }
 .smallbox{
     display: flex;
@@ -57,5 +57,8 @@ p{
     }
     h1{
         font-size: 17px;
+    }
+    .form-check {
+        margin-bottom: 0.1rem;
     }
 }

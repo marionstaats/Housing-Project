@@ -1,7 +1,26 @@
-document.getElementById("submit").addEventListener("click", function (event) {
-        submit();
-        event.preventDefault(); //to not refresh page and lose input data   
-});
+//Bootstrap function to validate form empty inputs
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) { //if empty fields - no calculation, but still popup..
+            event.preventDefault(); 
+            event.stopPropagation();
+          } else{
+              event.preventDefault(); //prevents refresh
+              $('#exampleModalCenter').modal() //reveal modal(popup)
+              submit();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+})();
 
 //on button click
 function submit(){
@@ -36,7 +55,7 @@ function submit(){
         });       
 }
 
-// //function create box with results
+//function create box with results
 function createBox(json){
     if (json.Predicted_price == undefined){
         document.getElementById("price").innerHTML = `User input is not correct, please try again`;
@@ -45,7 +64,7 @@ function createBox(json){
     }
 }
 
-// //function create box with error
+//function create box with error
 function createErrorBox(){
         document.getElementById("price").innerHTML = `We encountered a server error, please try again`;
 }
