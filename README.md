@@ -15,11 +15,11 @@ The second thing is way to display the results.
 
 #### First look
 
-![firstlook](https://github.com/marionstaats/Housing-Project/image1.png?raw=true)
+![firstlook](/image1.png?raw=true)
 
 #### After submitting
 
-![submitpopup](https://github.com/marionstaats/Housing-Project/image2.png?raw=true)
+![submitpopup](/image2.png?raw=true)
 
 
 
