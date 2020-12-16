@@ -34,7 +34,7 @@ The second thing is way to display the results.
 
 ![submitpopup](/image5.png?raw=true)
 
-#### In case of adding non existing Belgian zipcode (outside of range 1000-9998)
+#### In case of forgetting required field and/or adding non existing Belgian zipcode (outside of range 1000-9998)
 
 ![submitpopup](/image3.png?raw=true)
 
