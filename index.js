@@ -1,4 +1,4 @@
-//Missing: deploy, readme(code uitleggen), user info whats wrong in field, github error na alert 
+//Missing: readme(code uitleggen), user info whats wrong in field, github error na alert(refresh wrong?) 
 
 //Bootstrap function to validate form empty inputs
 // Example starter JavaScript for disabling form submissions if there are invalid fields
