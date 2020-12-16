@@ -11,6 +11,15 @@ First. A form. The form will be for the user two complete with informations abou
 This form will be connected to the API.
 The second thing is way to display the results. 
 
+### Features
+- Checks if mandatory fields are filled
+- Checks if zip code exist in Belgium
+- Calculates predicted property price using an API created by Davy Nimbona
+
+### Explanation files
+
+
+
 ### Snapshot of the webapp
 
 #### First look
