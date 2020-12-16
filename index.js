@@ -1,4 +1,4 @@
-//Missing: readme(code uitleggen), user info whats wrong in field, github error na alert(refresh wrong?) 
+//Missing: user informing on whats whats wrong in field when red
 
 //Bootstrap function to validate form empty inputs
 // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -16,10 +16,6 @@ The second thing is way to display the results.
 - Checks if zip code exist in Belgium
 - Calculates predicted property price using an API created by Davy Nimbona
 
-### Explanation files
-
-
-
 ### Snapshot of the webapp
 
 #### First look
