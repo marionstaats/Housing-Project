@@ -26,9 +26,24 @@ The second thing is way to display the results.
 
 ![firstlook](/image1.png?raw=true)
 
-#### After submitting
+#### After correctly submitting
 
 ![submitpopup](/image2.png?raw=true)
+
+#### In case of server problems API
+
+![submitpopup](/image5.png?raw=true)
+
+#### In case of adding non existing Belgian zipcode (outside of range 1000-9998)
+
+![submitpopup](/image3.png?raw=true)
+
+#### In case of adding non existing Belgian zipcode (but still 4 numbers)
+
+![submitpopup](/image4.png?raw=true)
+
+
+
 
 
 

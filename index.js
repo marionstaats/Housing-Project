@@ -1,3 +1,5 @@
+//Missing: deploy, readme(code uitleggen), user info whats wrong in field, github error na alert 
+
 //Bootstrap function to validate form empty inputs
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
